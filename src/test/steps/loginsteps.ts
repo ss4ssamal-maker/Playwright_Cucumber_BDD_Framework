@@ -6,12 +6,13 @@ let browser: Browser;
 let context: BrowserContext;
 let page: Page;
 
-Before(async()=>{
+Before(async()=>{ 
     browser= await chromium.launch({
      headless:false,
     })
     context= await browser.newContext();
     page = await context.newPage();
+    console.log("Execution started")
   })
       Given("User lunch OrangeHRM Application", async function () {
         // Write code here that turns the phrase above into concrete actions
